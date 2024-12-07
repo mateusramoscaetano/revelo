@@ -57,6 +57,9 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      screens: {
+        "1730": "1730px",
+      },
     },
     fontFamily: {
       body: ["Neue", "sans-serif"],
