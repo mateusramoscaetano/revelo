@@ -57,10 +57,7 @@ export function AboutUsCard({
   const [isTouchActive, setIsTouchActive] = useState(false);
 
   const handleTouchStart = () => setIsTouchActive(true);
-  const handleTouchEnd = () => {
-    // Garantir que a transição de volta ocorra de forma suave
-    setTimeout(() => setIsTouchActive(false), 50); // Ajuste o delay aqui se necessário
-  };
+  const handleTouchEnd = () => setIsTouchActive(false);
 
   return (
     <motion.div
@@ -70,15 +67,15 @@ export function AboutUsCard({
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       className={`relative w-[352px] h-[352px] overflow-hidden cursor-pointer group transition-colors duration-700 ease-in-out ${
-        isTouchActive ? "bg-white" : "hover:bg-white"
+        isTouchActive ? "bg-white" : "lg:hover:bg-white"
       }`}
     >
       {/* Imagem */}
       <motion.img
         src={img}
-        alt="iage"
+        alt="imae"
         className={`w-full h-full object-cover transition-opacity duration-500 ${
-          isTouchActive ? "opacity-0" : "group-hover:opacity-0"
+          isTouchActive ? "opacity-0" : "lg:group-hover:opacity-0"
         }`}
       />
 
