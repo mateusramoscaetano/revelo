@@ -24,7 +24,7 @@ export function HowWeDoCard({
   return (
     <div
       className={cn(
-        "flex items-center justify-start gap-[25px] max-w-[406px]",
+        "flex items-center justify-start min-w-[342px] gap-[25px] max-w-[406px]",
         className
       )}
     >

@@ -17,7 +17,7 @@ export function HowWeDoMobile() {
   }
   return (
     <>
-      <div className="flex 1400:hidden flex-col gap-12 items-center justify-center">
+      <div className="flex 1400:hidden min-h-[1800px]  flex-col gap-12 items-center justify-center">
         <HowWeDoCard
           left={true}
           asset="/icons/person.png"
@@ -63,6 +63,50 @@ export function HowWeDoMobile() {
         <div className="w-[70px] text-white bg-white h-0.5  rotate-90 mx-auto "></div>
 
         <VideoPlayer2 className="-mt-24" />
+
+        <HowWeDoCard
+          left={true}
+          asset="/icons/person.png"
+          description={
+            <div>
+              Nossa equipe é altamente qualificada <br /> e com um olhar único
+              para a fotografia
+            </div>
+          }
+          title="Fotógrafos Referência"
+          width={39.62}
+          height={45}
+          className="-mt-28"
+        />
+        <div className="w-[70px] text-white bg-white h-0.5  rotate-90 mx-auto "></div>
+        <HowWeDoCard
+          left={true}
+          asset="/icons/graph.png"
+          description={
+            <div>
+              Criamos situações de fotos perfeitas <br />
+              sem depender do acaso,
+            </div>
+          }
+          title="Não é sorte, é processo"
+          width={47}
+          height={24}
+        />
+        <div className="w-[70px] text-white bg-white h-0.5  rotate-90 mx-auto "></div>
+        <HowWeDoCard
+          left={true}
+          asset="/icons/sec.png"
+          description={
+            <div>
+              Nossas fotografias são armazenadas <br />
+              com o que há de mais moderno em <br />
+              tecnologia de backup e segurança
+            </div>
+          }
+          title="Segurança"
+          width={36}
+          height={46}
+        />
       </div>
     </>
   );

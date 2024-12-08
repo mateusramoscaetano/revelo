@@ -12,7 +12,7 @@ export function HowWeDo() {
   }, []);
 
   if (!isClient) {
-    return null; // Apenas renderiza no cliente
+    return null;
   }
   return (
     <>
@@ -89,8 +89,8 @@ export function HowWeDo() {
               </div>
             }
             title="Não é sorte, é processo"
-            width={54}
-            height={28}
+            width={47}
+            height={24}
           />
           <HowWeDoCard
             left={false}

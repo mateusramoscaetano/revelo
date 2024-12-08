@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useState } from "react";
+
+import { useState } from "react";
 import ReactPlayer from "react-player";
 import Image from "next/image";
 import { Play } from "lucide-react";
@@ -10,7 +11,7 @@ export const VideoPlayer = ({ className }: { className?: string }) => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
 
-  const [isOverlayActive, setIsOverlayActive] = useState(false); // Controle do overlay
+  const [isOverlayActive, setIsOverlayActive] = useState(false);
   const toggleOverlay = () => {
     setIsMuted(true);
     setIsOverlayActive((prev) => !prev);
@@ -80,8 +81,7 @@ export const VideoPlayer = ({ className }: { className?: string }) => {
           type="button"
           onClick={() => {
             toggleOverlay();
-
-            setIsMuted(false);
+            setIsMuted(true);
           }}
           className="px-4 py-2  text-white rounded-md"
         >
