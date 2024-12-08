@@ -49,7 +49,7 @@ export const VideoPlayer2 = ({ className }: { className?: string }) => {
         className="absolute top-28 left-[54px] z-10 pointer-events-none "
       />
 
-      <div className="absolute top-[300px] left-[135px] z-20">
+      <div className="absolute top-[315px] left-[133.5px] z-20">
         <button
           type="button"
           onClick={() => {
