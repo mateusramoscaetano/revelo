@@ -10,6 +10,10 @@ export const VideoPlayer2 = ({ className }: { className?: string }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
 
+  const togglePlay = () => {
+    setIsPlaying((prev) => !prev);
+  };
+
   return (
     <div className={cn("relative h-[767px]  w-full mx-auto ", className)}>
       <div
@@ -50,7 +54,7 @@ export const VideoPlayer2 = ({ className }: { className?: string }) => {
           type="button"
           onClick={() => {
             setIsMuted(false);
-            setIsPlaying(true);
+            togglePlay();
           }}
           className="px-4 py-2  text-white rounded-md"
         >
