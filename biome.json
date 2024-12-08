@@ -36,7 +36,8 @@
 			"a11y": {
 				"useValidAnchor": "off",
 				"useKeyWithClickEvents": "off",
-				"noSvgWithoutTitle": "off"
+				"noSvgWithoutTitle": "off",
+				"useAltText": "off"
 			}
 		}
 	},

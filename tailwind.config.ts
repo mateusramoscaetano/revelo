@@ -59,6 +59,7 @@ const config: Config = {
       },
       screens: {
         "1730": "1730px",
+        "1400": "1400px",
       },
     },
     fontFamily: {
