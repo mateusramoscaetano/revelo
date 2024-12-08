@@ -9,10 +9,6 @@ export function GridSquare({
   img: string;
   className?: string;
 }) {
-  const getRandomColor = () => {
-    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
-    return `#${randomColor}`;
-  };
   return (
     <>
       <div
@@ -20,7 +16,6 @@ export function GridSquare({
           "flex items-center justify-center w-[389px] h-[388px]",
           className
         )}
-        style={{ backgroundColor: getRandomColor() }}
       >
         {name}
       </div>

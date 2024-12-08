@@ -1,8 +1,19 @@
+"use client";
 import Image from "next/image";
 import { HowWeDoCard } from "./how-we-do-card";
 import { VideoPlayer } from "./video-player";
+import { useEffect, useState } from "react";
 
 export function HowWeDo() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null; // Apenas renderiza no cliente
+  }
   return (
     <>
       <div className="hidden 1400:flex">

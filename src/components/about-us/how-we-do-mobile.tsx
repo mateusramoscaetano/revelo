@@ -1,9 +1,20 @@
+"use client";
+import { useEffect, useState } from "react";
 import { Separator } from "../ui/separator";
 import { HowWeDoCard } from "./how-we-do-card";
 import { VideoPlayer } from "./video-player";
 import { VideoPlayer2 } from "./video-player-mobile";
 
 export function HowWeDoMobile() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null;
+  }
   return (
     <>
       <div className="flex 1400:hidden flex-col gap-12 items-center justify-center">

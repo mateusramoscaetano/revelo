@@ -9,6 +9,7 @@ import Image from "next/image";
 import { HowWeDo } from "@/components/about-us/how-we-do";
 import Carousel from "@/components/carousel/carousel-test";
 import { HowWeDoMobile } from "@/components/about-us/how-we-do-mobile";
+import { AboutUSContainer } from "@/components/about-us/about-us-container";
 
 export default function Home() {
   return (
@@ -58,28 +59,7 @@ export default function Home() {
           <AboutUsSection />
         </div>
       </div>
-
-      <div
-        id="us"
-        className="flex flex-col justify-start items-center  relative"
-      >
-        <AboutUsGrid />
-        <div className="mb-24 ">
-          <div className="pb-2 px-10 flex flex-col items-start  justify-start mb-[30px]">
-            <div className=" text-xl font-semibold flex items-center">
-              Como fazemos
-              <span className="ml-2 h-0.5 w-[62px] bg-red-500"></span>
-            </div>
-          </div>
-          <div className="text-xl lg:text-2xl max-w-[405px] px-10">
-            Nosso método foi desenvolvido minuciosamente para entregar o que há
-            de melhor em fotografia, tratamento e atendimento.
-          </div>
-        </div>
-        <HowWeDo />
-        <HowWeDoMobile />
-      </div>
-      <Carousel />
+      <AboutUSContainer />
     </>
   );
 }

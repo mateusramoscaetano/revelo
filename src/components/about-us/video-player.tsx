@@ -18,10 +18,6 @@ export const VideoPlayer = ({ className }: { className?: string }) => {
 
   const overlay = isOverlayActive ? "0" : "40px";
 
-  useEffect(() => {
-    console.log("overlay", isOverlayActive);
-  }, [isOverlayActive, isPlaying]);
-
   return (
     <div className={cn("relative h-[767px]  w-[562px] mx-auto ", className)}>
       {isOverlayActive && (
