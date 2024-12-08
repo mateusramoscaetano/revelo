@@ -45,7 +45,7 @@ export const VideoPlayer2 = ({ className }: { className?: string }) => {
           loop
           width={251}
           height={554}
-          className={cn("absolute top-24 left-[150px] scale-[96%] ")}
+          className={cn("absolute top-24 left-[160px] scale-[95%] ")}
           config={{
             file: {
               attributes: {
@@ -63,7 +63,7 @@ export const VideoPlayer2 = ({ className }: { className?: string }) => {
         width={562}
         height={767}
         alt="iphone"
-        className="absolute -top-[202px] -left-1 z-10 pointer-events-none scale-[46%]"
+        className="absolute -top-[202px] left-0 z-10 pointer-events-none scale-[46%]"
       />
 
       <div className="absolute top-[350px] left-[236px] z-20">

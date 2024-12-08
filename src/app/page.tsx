@@ -64,14 +64,14 @@ export default function Home() {
         className="flex flex-col justify-start items-center  relative"
       >
         <AboutUsGrid />
-        <div className="mb-24">
-          <div className="pb-2 flex flex-col items-start  justify-start mb-[30px]">
-            <div className="text-xl font-semibold flex items-center">
+        <div className="mb-24 ">
+          <div className="pb-2 px-10 flex flex-col items-start  justify-start mb-[30px]">
+            <div className=" text-xl font-semibold flex items-center">
               Como fazemos
               <span className="ml-2 h-0.5 w-[62px] bg-red-500"></span>
             </div>
           </div>
-          <div className="text-2xl max-w-[405px]">
+          <div className="text-xl lg:text-2xl max-w-[405px] px-10">
             Nosso método foi desenvolvido minuciosamente para entregar o que há
             de melhor em fotografia, tratamento e atendimento.
           </div>
