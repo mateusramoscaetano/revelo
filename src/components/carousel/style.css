@@ -1,3 +1,7 @@
+:root {
+  --swiper-pagination-bottom: 0;
+}
+
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -7,17 +11,16 @@
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 300px;
+  width: 300px !important;
+height: 100% !important;
 }
 
 .swiper-slide img {
   display: block;
-  width: 100%;
 }
-.swiper-pagination-bullet-active{
-  background-color: #EC2D31;
+.swiper-pagination-bullet-active {
+  background-color: #ec2d31;
 }
-.swiper-pagination{
- top: 100px;
+.swiper-pagination {
+  top: 100px;
 }

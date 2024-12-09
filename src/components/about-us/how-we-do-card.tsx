@@ -28,7 +28,15 @@ export function HowWeDoCard({
         className
       )}
     >
-      {left && <Image src={asset} width={width} height={height} alt="icon" />}
+      {left && (
+        <Image
+          src={asset}
+          width={width}
+          height={height}
+          alt="icon"
+          className={`w${width} h-auto`}
+        />
+      )}
       <div className="flex flex-col space-y-4">
         <div
           className={cn(

@@ -120,7 +120,7 @@ function LogoFooterSec() {
         width={142}
         height={44.16}
         alt="logo"
-        className="mb-[86px]"
+        className="mb-[86px] w-auto"
       />
       <div className="text-xs w-fit lg:flex  tracking-widest hidden">
         {" "}

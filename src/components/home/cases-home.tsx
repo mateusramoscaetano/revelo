@@ -34,7 +34,7 @@ export function CasesHome() {
         width={401}
         height={176}
         alt="banner"
-        className="lg:hidden"
+        className="lg:hidden w-auto"
       />
     </>
   );
