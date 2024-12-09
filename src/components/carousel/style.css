@@ -8,7 +8,7 @@
   background-position: center;
   background-size: cover;
   width: 300px;
-  height: 500px;
+  height: 300px;
 }
 
 .swiper-slide img {
@@ -17,4 +17,7 @@
 }
 .swiper-pagination-bullet-active{
   background-color: #EC2D31;
+}
+.swiper-pagination{
+ top: 100px;
 }

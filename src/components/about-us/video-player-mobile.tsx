@@ -61,6 +61,18 @@ export const VideoPlayer2 = ({ className }: { className?: string }) => {
           <Play size={50} />
         </button>
       </div>
+
+      <div className="w-[70px] absolute text-white left-[138px] bottom-[120px] bg-white h-0.5  rotate-90 mx-auto"></div>
+
+      {/* <div className="relative  top-40">
+        <Image
+          src="/revelo-bg.png"
+          width={1204}
+          height={464}
+          alt="iphone"
+          className=" object-cover absolute  z-[-100px]"
+        />
+      </div> */}
     </div>
   );
 };
