@@ -6,13 +6,14 @@ import "swiper/css/pagination";
 
 import "./style-mobile.css";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 import { mediaItems } from "@/utils/media-items";
 
 export function CarouselMobile() {
   const shuffledItems = mediaItems;
+  const swiper = useSwiper();
 
   return (
     <>
@@ -22,15 +23,16 @@ export function CarouselMobile() {
         centeredSlides={true}
         slidesPerView={2}
         coverflowEffect={{
-          rotate: 50,
+          rotate: 20,
           stretch: 0,
           depth: 100,
           modifier: 1,
         }}
         loop
+        spaceBetween={0}
         pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper overflow-hidden object-cover"
+        modules={[EffectCoverflow, Pagination, Navigation]}
+        className="mySwiper overflow-hidden object-cover relative"
       >
         {shuffledItems.map((item, index) => (
           <SwiperSlide key={index}>
