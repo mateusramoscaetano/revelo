@@ -37,7 +37,6 @@ export default function Carousel() {
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={isMobile ? 3 : 5}
-        slidesPerGroupAuto
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
