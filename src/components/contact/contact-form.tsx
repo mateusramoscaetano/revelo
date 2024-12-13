@@ -1,0 +1,146 @@
+"use client";
+import { useState, type ReactNode } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Spinner } from "../ui/spinner";
+import { formatPhone } from "@/utils/formatPhone";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormMessage,
+} from "../ui/form";
+import { Input } from "../ui/input";
+import { Textarea } from "../ui/textarea";
+import { MainButton } from "../ui/main-button";
+
+interface IContactFormProps {}
+
+export interface ContactSchema {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+}
+
+const createContact = z.object({
+  name: z.string({ required_error: "Campo obrigatório" }),
+  email: z.string({ required_error: "Campo obrigatório" }),
+  phone: z.string({ required_error: "Campo obrigatório" }),
+  message: z.string({ required_error: "Campo obrigatório" }),
+});
+
+export function ContactForm({}: IContactFormProps) {
+  const [buttonLabel, setButtonLabel] = useState<ReactNode>("Enviar");
+
+  const form = useForm<z.infer<typeof createContact>>({
+    resolver: zodResolver(createContact),
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = async (values: z.infer<typeof createContact>) => {
+    try {
+      setButtonLabel(<Spinner />);
+
+      const response = await fetch("/api/email", {
+        method: "POST",
+        body: JSON.stringify({
+          email: values.email,
+          message: `Email:${values.message}`,
+          Nome: values.name,
+          Telefone: values.phone,
+        }),
+      });
+
+      setButtonLabel("Enviado");
+    } catch (error) {
+      setButtonLabel("Erro");
+    }
+  };
+
+  function handlePhoneInput(event: React.ChangeEvent<HTMLInputElement>) {
+    const { value } = event.target;
+    event.target.value = formatPhone(value);
+  }
+
+  return (
+    <div className="flex flex-col gap-[18px] w-full max-w-[571px]">
+      <Form {...form}>
+        <div className="flex gap-[25px] w-full">
+          <FormField
+            control={form.control}
+            name="name"
+            render={({ field, fieldState }) => (
+              <FormItem className="flex-1">
+                <FormControl>
+                  <Input {...field} placeholder="Nome" />
+                </FormControl>
+                <FormMessage>
+                  {fieldState.error?.message && fieldState.error?.message}
+                </FormMessage>
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="phone"
+            render={({ field, fieldState }) => (
+              <FormItem className="flex-1">
+                <FormControl>
+                  <Input
+                    {...field}
+                    placeholder="Celular"
+                    onInput={handlePhoneInput}
+                  />
+                </FormControl>
+                <FormMessage>
+                  {fieldState.error?.message && fieldState.error?.message}
+                </FormMessage>
+              </FormItem>
+            )}
+          />
+        </div>
+        <FormField
+          control={form.control}
+          name="email"
+          render={({ field, fieldState }) => (
+            <FormItem>
+              <FormControl>
+                <Input {...field} placeholder="Email" />
+              </FormControl>
+              <FormMessage>
+                {fieldState.error?.message && fieldState.error?.message}
+              </FormMessage>
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="message"
+          render={({ field, fieldState }) => (
+            <FormItem>
+              <FormControl>
+                <Textarea
+                  {...field}
+                  placeholder="Mensagem"
+                  className="min-h-[148px]"
+                />
+              </FormControl>
+              <FormMessage>
+                {fieldState.error?.message && fieldState.error?.message}
+              </FormMessage>
+            </FormItem>
+          )}
+        />
+        <MainButton label={buttonLabel} />
+      </Form>
+    </div>
+  );
+}

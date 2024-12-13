@@ -14,6 +14,7 @@ export function AboutUsHome() {
       </div>
 
       <div className="space-y-4 flex-col w-full items-center justify-center">
+        {/* Mobile */}
         <div className="space-y-2 md:mr-4 mb-[37px] xl:hidden flex flex-col">
           <p className="text-2xl font-medium tracking-widest max-w-[319px]">
             Revelamos aquilo que <br /> se é incapaz de enxergar.
@@ -27,6 +28,7 @@ export function AboutUsHome() {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row gap-[22px]">
+          {/* DESKTOP */}
           <div className="space-y-6 md:mr-4 mb-[37px] hidden xl:flex xl:flex-col">
             <p className="text-2xl font-medium tracking-widest max-w-[319px]">
               Revelamos aquilo que <br /> se é incapaz de enxergar.

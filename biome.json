@@ -37,7 +37,8 @@
 				"useValidAnchor": "off",
 				"useKeyWithClickEvents": "off",
 				"noSvgWithoutTitle": "off",
-				"useAltText": "off"
+				"useAltText": "off",
+				"useSemanticElements": "off"
 			}
 		}
 	},
