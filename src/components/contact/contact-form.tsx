@@ -73,7 +73,7 @@ export function ContactForm({}: IContactFormProps) {
   return (
     <div className="flex flex-col gap-[18px] w-full max-w-[571px]">
       <Form {...form}>
-        <div className="flex gap-[25px] w-full">
+        <div className="flex flex-col lg:flex-row gap-[25px] w-full">
           <FormField
             control={form.control}
             name="name"
@@ -139,7 +139,24 @@ export function ContactForm({}: IContactFormProps) {
             </FormItem>
           )}
         />
-        <MainButton label={buttonLabel} />
+        <div className="flex space-x-2">
+          <MainButton
+            label={buttonLabel}
+            onClick={form.handleSubmit(onSubmit)}
+          />
+          {buttonLabel === "Enviado" && (
+            <button
+              type="button"
+              onClick={() => {
+                form.reset();
+                setButtonLabel("Enviar");
+              }}
+              className="text-sm"
+            >
+              enviar novamente
+            </button>
+          )}
+        </div>
       </Form>
     </div>
   );

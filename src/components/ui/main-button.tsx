@@ -1,6 +1,6 @@
 "use client";
 import { motion, type HTMLMotionProps } from "framer-motion";
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 interface IMainButtonProps extends HTMLMotionProps<"button"> {
   label: ReactNode;
 }
@@ -8,7 +8,7 @@ interface IMainButtonProps extends HTMLMotionProps<"button"> {
 export function MainButton({ label, ...rest }: IMainButtonProps) {
   return (
     <>
-      <div className="flex  cursor-pointer group">
+      <div className="  cursor-pointer group hidden lg:flex">
         <motion.button
           {...rest}
           className="flex items-center justify-center px-3 py-2.5 bg-revelo tracking-wider rounded-lg relative w-[105px] h-7 group-hover:scale-x-[129%] group-hover:scale-y-125  duration-300"
@@ -18,6 +18,20 @@ export function MainButton({ label, ...rest }: IMainButtonProps) {
           </span>
         </motion.button>
       </div>
+
+      <button
+        className={"flex lg:hidden cursor-pointer group"}
+        type="button"
+        onClick={rest.onClick}
+      >
+        <motion.div
+          className={
+            "flex items-center justify-center px-3 py-2.5 bg-revelo tracking-wider rounded-lg relative w-[111px] h-7 duration-300 "
+          }
+        >
+          <span className="duration-300">{label}</span>
+        </motion.div>
+      </button>
     </>
   );
 }
