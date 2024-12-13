@@ -66,16 +66,16 @@ export function HowWeDoMobile() {
 
         <HowWeDoCard
           left={true}
-          asset="/icons/person.png"
+          asset="/icons/live.png"
           description={
             <div>
-              Nossa equipe é altamente qualificada <br /> e com um olhar único
-              para a fotografia
+              Suas fotos mais importantes com <br />
+              tratamento e entrega em tempo real
             </div>
           }
-          title="Fotógrafos Referência"
-          width={39.62}
-          height={45}
+          title="Entrega de Fotos Ao Vivo"
+          width={47}
+          height={47}
           className="-mt-28"
         />
         <div className="w-[70px] text-white bg-white h-0.5  rotate-90 mx-auto "></div>
