@@ -3,9 +3,9 @@ import { TeamMemberCard } from "./team-member-card";
 export function MeetOurTeam() {
   return (
     <>
-      <div className="flex items-center flex-col lg:grid  lg:grid-rows-3 lg:grid-cols-3 w-full  max-w-[1116px] relative gap-[32px] mt-[60px] mb-[73px] lg:mt-[121px] lg:mb-[146px]">
-        <div className="pb-2 flex flex-col items-start  justify-start mt-[81px]">
-          <div className="text-xl font-semibold flex items-center mb-[32px]">
+      <div className="flex items-center  flex-col lg:grid  lg:grid-rows-3 lg:grid-cols-3 w-full  max-w-[1116px] relative gap-[32px] mt-[60px] mb-[73px] lg:mt-[121px] lg:mb-[146px]">
+        <div className="pb-2 flex flex-col w-full max-w-[357px] mt-[81px]">
+          <div className="text-xl font-semibold w-full flex items-center mb-[32px]">
             Conheça nosso time
             <span className="ml-2 h-0.5 w-[62px] bg-red-500"></span>
           </div>

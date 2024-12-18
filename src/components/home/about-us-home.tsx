@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export function AboutUsHome() {
   return (
-    <div className="bg-[#101010] lg:bg-[#181818] text-white max-w-[400px] border-none  justify-center lg:w-full lg:max-w-[1552px] py-16 px-[31px]">
+    <div className="bg-[#181818] text-white max-w-[400px] border-none items-center justify-center lg:w-[1116px] lg:max-w-[1552px] py-16 ">
       <div className="pb-2 flex flex-col items-start  justify-start">
         <div className="text-xl font-semibold flex items-center mb-[32px]">
           Sobre Nós
@@ -13,9 +13,9 @@ export function AboutUsHome() {
         </div>
       </div>
 
-      <div className="space-y-4 flex-col w-full items-center justify-center">
+      <div className="space-y-4 flex-col w-full min-w-[357px] items-center justify-center">
         {/* Mobile */}
-        <div className="space-y-2 md:mr-4 mb-[37px] xl:hidden flex flex-col">
+        <div className="space-y-2 md:mr-4 mb-[37px] xl:hidden flex flex-col ">
           <p className="text-2xl font-medium tracking-widest max-w-[319px]">
             Revelamos aquilo que <br /> se é incapaz de enxergar.
           </p>

@@ -2,9 +2,9 @@ import "./styles.css";
 export function WhereWeAreMap() {
   return (
     <>
-      <div className="w-full min-h-full flex flex-col  justify-center mb-[60px]">
-        <div className="pb-2  flex flex-col items-start  justify-start mb-5 px-5 lg:px-20 2xl:px-[310px]">
-          <div className=" text-xl font-semibold flex items-center">
+      <div className="w-full  min-h-full flex flex-col items-center justify-center mb-[60px]">
+        <div className="pb-2  w-full max-w-[357px] lg:max-w-full flex flex-col items-start  justify-start mb-5 px-5 lg:px-20 2xl:px-[310px]">
+          <div className=" text-xl  font-semibold flex items-center">
             Onde Estamos
             <div className="ml-2 h-0.5 w-[62px] bg-red-500"></div>
           </div>

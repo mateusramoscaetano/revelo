@@ -14,10 +14,9 @@ export function Home() {
         <GridXl />
 
         <CasesHome />
-
-        <div className="flex items-center justify-center">
-          <AboutUsHome />
-        </div>
+      </div>
+      <div className="flex items-center justify-center">
+        <AboutUsHome />
       </div>
     </>
   );

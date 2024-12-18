@@ -1,4 +1,7 @@
+"use client";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import type { ReactNode } from "react";
 
 export function GridSquare({
   name,
@@ -6,18 +9,18 @@ export function GridSquare({
   className,
 }: {
   name: string;
-  img: string;
+  img: ReactNode;
   className?: string;
 }) {
   return (
     <>
       <div
         className={cn(
-          "flex items-center justify-center w-[389px] h-[388px] border-[0.5px] border-white",
+          "flex items-center justify-center w-[389px] h-[388px] ",
           className
         )}
       >
-        {name}
+        {img}
       </div>
     </>
   );
