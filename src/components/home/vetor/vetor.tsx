@@ -1,11 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
 interface IVetorProps {}
 
 export function Vetor({}: IVetorProps) {
   return (
     <>
-      <motion.img src="/ENXERGAR.SVG" />
+      <img src="/ENXERGAR.SVG" alt="" className="w-auto h-auto" />
     </>
   );
 }
