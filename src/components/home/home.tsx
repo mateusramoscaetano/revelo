@@ -1,6 +1,6 @@
 import { AboutUsHome } from "./about-us-home";
 import { CasesHome } from "./cases-home";
-import { Grid, GridMd, GridXl } from "./grid";
+import { Grid, GridMd, GridSm, GridXl } from "./grid";
 
 export function Home() {
   return (
@@ -12,8 +12,7 @@ export function Home() {
         <Grid />
         <GridMd />
         <GridXl />
-
-        <CasesHome />
+        <GridSm />
       </div>
       <div className="flex items-center justify-center">
         <AboutUsHome />
