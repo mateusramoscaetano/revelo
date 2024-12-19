@@ -1,10 +1,9 @@
 import Image from "next/image";
-import { ImageSwitcher } from "../image-switcher";
+
 import { FollowRevelo } from "./follow-revelo";
 import { GridSquare } from "./square";
 import { Vetor } from "./vetor/vetor";
-
-const images1 = ["/image-1-1.png", "/img-1-2.png"];
+import { ImageSwitcher } from "../image-switcher";
 
 export function Grid() {
   return (
@@ -12,7 +11,9 @@ export function Grid() {
       <FollowRevelo />
       <GridSquare
         name="1"
-        img={<ImageSwitcher image1={images1[0]} image2={images1[1]} />}
+        img={
+          <ImageSwitcher image1={"/image-1-1.png"} image2={"/img-1-2.png"} />
+        }
       />
       <GridSquare
         name="2"
@@ -21,28 +22,70 @@ export function Grid() {
       <GridSquare
         name="3"
         img={
-          <Image
-            src="/img-3.png"
-            width={388}
-            height={388}
-            alt=""
-            className="scale-[140%] pl-4"
+          <ImageSwitcher
+            image1={"/img-3.png"}
+            image2={"/img-3-2.png"}
+            className="scale-[108%] pl-[12px]"
           />
         }
         className="bg-revelo overflow-hidden"
       />
-      <GridSquare name="4" img="" />
-      <GridSquare name="5" img="" />
-      <GridSquare name="6" img="" className="" />
+      <GridSquare
+        name="4"
+        img={<ImageSwitcher image1={"/img-4.png"} image2={"/img-4-2.png"} />}
+      />
+      <GridSquare
+        name="5"
+        img={<ImageSwitcher image1={"/img-5.png"} image2={"/img-5-2.png"} />}
+      />
+      <GridSquare
+        name="6"
+        img={
+          <ImageSwitcher
+            image1={"/img-6.png"}
+            image2={"/img-3.png"}
+            className2="scale-[108%] pl-[12px]"
+          />
+        }
+        className="bg-revelo overflow-hidden"
+      />
       <GridSquare
         name="7"
         img={<Vetor />}
         className="1730:col-span-2 w-full bg-white"
       />
-      <GridSquare name="8" img="" className="1730:row-start-3" />
-      <GridSquare name="9" img="" className="1730:row-start-3" />
-      <GridSquare name="10" img="" className="1730:row-start-3" />
-      <GridSquare name="11" img="" className="1730:row-start-3" />
+      <GridSquare
+        name="8"
+        img={
+          <ImageSwitcher
+            image1={"/img-7.png"}
+            image2={"/img-6-2.png"}
+            className="scale-[140%] pb-[48px] pl-8"
+          />
+        }
+        className="1730:row-start-3 bg-revelo overflow-hidden"
+      />
+      <GridSquare
+        name="9"
+        img={<ImageSwitcher image1={"/img-8.png"} image2={"/img-7-2.png"} />}
+        className="1730:row-start-3"
+      />
+      <GridSquare
+        name="10"
+        img={
+          <ImageSwitcher
+            image1={"/img-9.png"}
+            image2={"/img-7.png"}
+            className2="scale-[140%] pb-[48px] pl-8"
+          />
+        }
+        className="1730:row-start-3 bg-revelo overflow-hidden"
+      />
+      <GridSquare
+        name="11"
+        img={<ImageSwitcher image1={"/img-10.png"} image2={"/img-8-2.png"} />}
+        className="1730:row-start-3"
+      />
     </div>
   );
 }

@@ -6,7 +6,7 @@ interface IVetorProps {}
 export function Vetor({}: IVetorProps) {
   return (
     <>
-      <img src="/ENXERGAR.SVG" alt="" className="w-auto h-auto" />
+      <img src="/Enxergar.gif" alt="" className="w-auto h-auto" />
     </>
   );
 }
