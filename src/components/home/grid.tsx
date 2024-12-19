@@ -208,7 +208,6 @@ export function GridMd() {
 export function GridSm() {
   return (
     <div className="grid lg:hidden lg:grid-cols-2 xl:hidden   w-full relative">
-      <FollowRevelo />
       <GridSquare
         name="1"
         img={<ImageSwitcher image1={"/img-11.png"} image2={"/img-7-2.png"} />}
@@ -237,8 +236,8 @@ export function GridSm() {
       />
       <GridSquare
         name="3"
-        img={<Vetor className="" />}
-        className="col-span-2 w-full bg-white h-[200px]"
+        img={<Vetor className="scale-50" />}
+        className="col-span-2 w-full max-w-[400px] bg-white h-[200px]"
       />
       <GridSquare
         name="4"
