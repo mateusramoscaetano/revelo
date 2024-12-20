@@ -27,7 +27,7 @@ export function Footer() {
               src={"/nestlab-logo.png"}
               width={58}
               height={14.16}
-              className="w-auto h-auto ml-1"
+              className="w-auto h-auto ml-4 scale-150"
               alt="logo"
             />
           </div>
@@ -43,9 +43,16 @@ function Visit() {
       <div className="font-semibold text-base w-full whitespace-nowrap">
         Visite Nossos Outros Canais
       </div>
-      <div className="text-sm flex font-medium whitespace-nowrap">
+
+      <a
+        href="https://www.instagram.com/rvloprod?igsh=OGp3Z3RuZTFqc2h5"
+        target="_blank"
+        rel="noreferrer"
+        className="text-sm flex font-medium whitespace-nowrap"
+      >
         <Instagram className="mr-2 size-5" /> Instagram
-      </div>
+      </a>
+
       <div className="text-sm flex font-medium whitespace-nowrap">
         <svg
           width="16"
@@ -114,7 +121,7 @@ function OurPlaces() {
 
 function LogoFooterSec() {
   return (
-    <div className="flex flex-col  items-center justify-center lg:max-w-[180px]">
+    <div className="flex flex-col w-full  items-center justify-center lg:max-w-[180px]">
       <Image
         src={"/logo.svg"}
         width={142}
@@ -122,14 +129,14 @@ function LogoFooterSec() {
         alt="logo"
         className="mb-[86px] w-auto"
       />
-      <div className="text-xs w-fit lg:flex  tracking-widest hidden">
+      <div className="text-xs w-full  lg:flex items-center justify-center tracking-widest hidden">
         {" "}
         Desenvolvido por
         <Image
           src={"/nestlab-logo.png"}
           width={58}
           height={14.16}
-          className="w-auto h-auto ml-1"
+          className="w-auto h-auto ml-4 scale-150"
           alt="logo"
         />
       </div>

@@ -26,6 +26,7 @@ export function Grid() {
             image1={"/img-3.png"}
             image2={"/img-3-2.png"}
             className="scale-[108%] pl-[12px]"
+            className2="pb-0.5"
           />
         }
         className="bg-revelo overflow-hidden"
@@ -110,6 +111,7 @@ export function GridXl() {
             image1={"/img-3.png"}
             image2={"/img-3-2.png"}
             className="scale-[108%] pl-[12px]"
+            className2="pb-0.5"
           />
         }
         className="bg-revelo overflow-hidden"
@@ -153,14 +155,14 @@ export function GridMd() {
       <FollowRevelo />
       <GridSquare
         name="1"
-        img={<ImageSwitcher image1={"/img-11.png"} image2={"/img-7-2.png"} />}
+        img={<ImageSwitcher image1={"/img-21.png"} image2={"/img-7-2.png"} />}
       />
       <GridSquare
         name="2"
         img={
           <ImageSwitcher
             image1={"/img-3.png"}
-            image2={"/img-3-2.png"}
+            image2={"/img-20.png"}
             className="scale-[108%] pl-[12px]"
           />
         }
@@ -168,11 +170,27 @@ export function GridMd() {
       />
       <GridSquare
         name="3"
-        img={<Image src="/img-2.png" width={388} height={388} alt="" />}
+        img={
+          <Image
+            src="/img-2.png"
+            width={388}
+            height={388}
+            alt=""
+            className="pt-[2px]"
+          />
+        }
+        className="bg-[#111111]"
       />
       <GridSquare
         name="4"
-        img={<ImageSwitcher image1={"/img-12.png"} image2={"/img-6-2.png"} />}
+        img={
+          <ImageSwitcher
+            image1={"/img-22.png"}
+            image2={"/img-6-2.png"}
+            className=""
+          />
+        }
+        className="overflow-hidden"
       />
       <GridSquare
         name="3"
@@ -192,11 +210,11 @@ export function GridMd() {
       />
       <GridSquare
         name="5"
-        img={<ImageSwitcher image1={"/img-13.png"} image2={"/img-4.png"} />}
+        img={<ImageSwitcher image1={"/img-8-2.png"} image2={"/img-4.png"} />}
       />
       <GridSquare
         name="6"
-        img={<ImageSwitcher image1={"/img-14.png"} image2={"/img-4.png"} />}
+        img={<ImageSwitcher image1={"/image-1-1.png"} image2={"/img-10.png"} />}
       />
       <GridSquare
         name="7"

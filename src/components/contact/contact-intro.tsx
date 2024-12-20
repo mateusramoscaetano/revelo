@@ -51,7 +51,9 @@ export function ContactIntro({}: IContactIntroProps) {
             />
           </a>
           <div className="flex items-center justify-center">
-            <span>contato@grupoatmosfera.com.br</span>
+            <p className="truncate max-w-[200px] 370:overflow-visible 370:max-w-full">
+              contato@grupoatmosfera.com.br
+            </p>
           </div>
         </div>
       </div>

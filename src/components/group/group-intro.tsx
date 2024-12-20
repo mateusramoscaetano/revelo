@@ -1,11 +1,9 @@
 import { MainButton } from "../ui/main-button";
 
-interface IGroupIntroProps {}
-
-export function GroupIntro({}: IGroupIntroProps) {
+export function GroupIntro() {
   return (
     <>
-      <div className="w-full max-w-[357px] lg:max-w-full min-h-full flex flex-col items-start justify-start px-5 lg:px-20 2xl:px-[310px] gap-[30px] mb-[157px]">
+      <div className="w-full max-w-[357px] lg:max-w-[1116px] min-h-full flex flex-col items-start justify-center  px-5 lg:px-0  gap-[30px] mb-[157px]">
         <div className="pb-2  flex flex-col items-start  justify-start ">
           <div className=" text-xl font-semibold flex items-center">
             O grupo
