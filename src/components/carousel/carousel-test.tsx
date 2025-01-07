@@ -12,15 +12,31 @@ import { EffectCoverflow, Pagination, Navigation, A11y } from "swiper/modules";
 
 import { mediaItems } from "@/utils/media-items";
 import { SwiperNavButtons } from "./swiper-nav-button";
+import { useEffect, useState } from "react";
 
 export default function Carousel() {
   const shuffledItems = mediaItems;
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1536);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
+        draggable={false}
         centeredSlides={true}
         slidesPerView={"auto"}
         coverflowEffect={{

@@ -6,16 +6,16 @@ import { motion } from "framer-motion";
 export function AboutUsHome() {
   return (
     <div className="bg-[#181818] text-white max-w-[400px] border-none items-center justify-center lg:w-[1116px] lg:max-w-[1552px] py-16 ">
-      <div className="pb-2 flex flex-col items-start  justify-start">
+      <div className="pb-2 flex flex-col items-start  justify-start px-4 sm:px-0">
         <div className="text-xl font-semibold flex items-center mb-[32px]">
           Sobre Nós
           <span className="ml-2 h-0.5 w-[62px] bg-red-500"></span>
         </div>
       </div>
 
-      <div className="space-y-4 flex-col w-full min-w-[357px] items-center justify-center">
+      <div className="space-y-4 flex-col w-full min-w-[357px] items-center justify-center px-4 sm:px-0">
         {/* Mobile */}
-        <div className="space-y-2 md:mr-4 mb-[37px] xl:hidden flex flex-col ">
+        <div className="space-y-2 md:mr-4 mb-[37px] xl:hidden flex flex-col">
           <p className="text-2xl font-medium tracking-widest max-w-[319px]">
             Revelamos aquilo que <br /> se é incapaz de enxergar.
           </p>
