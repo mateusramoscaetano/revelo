@@ -10,17 +10,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 import { scrollToSection } from "@/utils/ScrollToSection";
-import {
-  Instagram,
-  Linkedin,
-  Mail,
-  Menu,
-  Phone,
-  X,
-  Youtube,
-} from "lucide-react";
-import cn from "@/utils/cn";
-import AnimatedHamburgerMenu from "./animated-hamburguer-menu";
+import { Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 
 const menuItems = [

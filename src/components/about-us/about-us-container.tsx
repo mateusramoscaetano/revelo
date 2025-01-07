@@ -22,7 +22,7 @@ export function AboutUSContainer() {
           width={901}
           height={163}
           alt=""
-          className="absolute bottom-[875px] right-0 hidden xl:flex"
+          className="absolute bottom-[875px] right-0 hidden 2xl:flex"
         />
       </div>
     </>

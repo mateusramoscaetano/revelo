@@ -1,4 +1,5 @@
 import { SquareChevronLeft, SquareChevronRight } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 import { useSwiper } from "swiper/react";
 
@@ -12,17 +13,25 @@ export const SwiperNavButtons = () => {
         type="button"
         onClick={() => swiper.slidePrev()}
       >
-        <SquareChevronLeft size={48} className="text-revelo" />
+        <Image
+          src="FLECHA.svg"
+          width={30}
+          height={30}
+          className="text-revelo rotate-180"
+          alt=""
+        />
       </button>
       <button
         className="absolute right-20 top-[50%] z-20"
         type="button"
         onClick={() => swiper.slideNext()}
       >
-        <SquareChevronRight
-          size={48}
-          className="text-[#101010]"
-          fill="#ec2d31"
+        <Image
+          src="FLECHA.svg"
+          width={30}
+          height={30}
+          className="text-revelo"
+          alt=""
         />
       </button>
     </div>

@@ -1,10 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import ReactPlayer from "react-player";
 import Image from "next/image";
 import { Play } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { X } from "../icons/x";
 
 export const VideoPlayer2 = ({ className }: { className?: string }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -64,13 +63,13 @@ export const VideoPlayer2 = ({ className }: { className?: string }) => {
 
       <div className="w-[70px] absolute text-white left-[138px] bottom-[120px] bg-white h-0.5  rotate-90 mx-auto"></div>
 
-      {/* <div className="relative  top-40">
+      {/* <div className="relative  top-72">
         <Image
-          src="/revelo-bg.png"
+          src="/revelo-bg-2.png"
           width={1204}
           height={464}
           alt="iphone"
-          className=" object-cover absolute  z-[-100px]"
+          className=" 510:hidden object-cover absolute scale-[250%]  "
         />
       </div> */}
     </div>

@@ -61,6 +61,7 @@ const config: Config = {
         "1730": "1730px",
         "1400": "1400px",
         "370": "370px",
+        "510": "510px",
       },
     },
     fontFamily: {
