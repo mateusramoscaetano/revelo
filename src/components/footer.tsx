@@ -109,12 +109,6 @@ function OurPlaces() {
         <span>Batel | Curitiba | Paraná</span>
         <span>CEP 80420-140</span>
       </div>
-      <div className="text-sm flex flex-col">
-        <span className=" font-semibold">Loft Studio</span>
-        <span>Rua Comendador Araújo, 534 </span>
-        <span>Batel | Curitiba | Paraná</span>
-        <span>CEP 80420-000</span>
-      </div>
     </div>
   );
 }
