@@ -17,6 +17,7 @@ export function CarouselMobile() {
   return (
     <>
       <Swiper
+        id="gallery"
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}

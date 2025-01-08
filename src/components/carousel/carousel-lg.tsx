@@ -26,9 +26,8 @@ export function CarouselLg() {
         grabCursor={true}
         draggable={true}
         centeredSlides={true}
-        slidesPerView={8}
+        slidesPerView={"auto"}
         initialSlide={0}
-        loop
         onSwiper={setSwiper}
         coverflowEffect={{
           rotate: 50,

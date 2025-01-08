@@ -255,9 +255,9 @@ export function GridSm() {
         name="2"
         img={
           <ImageSwitcher
-            image1={"/img-3.png"}
-            image2={"/img-3-2.png"}
-            className=""
+            image1={"/img-34.jpg"}
+            image2={"/img-32.png"}
+            className2=""
           />
         }
         className="bg-revelo overflow-hidden w-full h-[200px] "

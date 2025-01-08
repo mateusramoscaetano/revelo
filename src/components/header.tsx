@@ -84,9 +84,8 @@ export function Header() {
 
         <nav className="hidden lg:flex  gap-2 xl:gap-9 items-center justify-center">
           {menuItems.map((item) => (
-            <Link
+            <div
               key={item.id}
-              href={item.path}
               onClick={() => {
                 handleOpen2(`${item.name}`);
                 setHighlightedPath(item.name);
@@ -105,10 +104,9 @@ export function Header() {
                   {item.text}
                 </span>
               </span>
-            </Link>
+            </div>
           ))}
-          <Link
-            href={"/#contact"}
+          <div
             onClick={() => {
               handleOpen2("contact");
               setHighlightedPath("contact");
@@ -121,7 +119,7 @@ export function Header() {
                 </span>
               </motion.div>
             </div>
-          </Link>
+          </div>
         </nav>
 
         {/* Menu Mobile */}
@@ -172,11 +170,7 @@ export function Header() {
           >
             <ul className="mb-8 flex flex-col items-center justify-center space-y-8">
               {menuItems.map((item, index) => (
-                <Link
-                  key={item.id}
-                  href={item.path}
-                  onClick={() => handleOpen2(`${item.name}`)}
-                >
+                <div key={item.id} onClick={() => handleOpen2(`${item.name}`)}>
                   <motion.li
                     key={item.id}
                     initial={{ opacity: 0, y: 20 }}
@@ -191,15 +185,29 @@ export function Header() {
                   >
                     {item.text}
                   </motion.li>
-                </Link>
+                </div>
               ))}
             </ul>
 
             <div className="absolute bottom-10 flex w-full items-end justify-center 3sm:gap-[30px] gap-4">
-              <Instagram />
+              <a
+                href="https://www.instagram.com/rvloprod?igsh=OGp3Z3RuZTFqc2h5"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm flex font-medium whitespace-nowrap"
+              >
+                <Instagram className="mr-2 size-5" />
+              </a>
               <Phone />
               <Linkedin />
-              <Mail />
+              <a
+                href="mailto:contato@grupoatmosfera.com.br"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm flex font-medium whitespace-nowrap"
+              >
+                <Mail />
+              </a>
             </div>
           </motion.div>
         )}
