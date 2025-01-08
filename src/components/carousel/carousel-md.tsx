@@ -13,7 +13,7 @@ import { EffectCoverflow, Pagination, Navigation, A11y } from "swiper/modules";
 import { mediaItems } from "@/utils/media-items";
 import { SwiperNavButtons } from "./swiper-nav-button";
 
-export default function Carousel() {
+export function CarouselMd() {
   const shuffledItems = mediaItems;
 
   return (
@@ -23,18 +23,18 @@ export default function Carousel() {
         grabCursor={true}
         draggable={false}
         centeredSlides={true}
-        slidesPerView={"auto"}
+        slidesPerView={5}
+        loop
         coverflowEffect={{
           rotate: 50,
           stretch: 0,
           depth: 100,
           modifier: 1,
+          slideShadows: true,
         }}
-        loop
-        slideToClickedSlide
         pagination={true}
         modules={[EffectCoverflow, Pagination, Navigation, A11y]}
-        className="mySwiper overflow-hidden object-cover relative "
+        className="mySwiper overflow-hidden object-cover relative select-none"
       >
         {shuffledItems.map((item, index) => (
           <SwiperSlide key={index}>
@@ -44,6 +44,7 @@ export default function Carousel() {
               height={300}
               alt={`media-${index}`}
               className="overflow-hidden"
+              fetchPriority="high"
             />
           </SwiperSlide>
         ))}

@@ -16,10 +16,10 @@ import Image from "next/image";
 const menuItems = [
   { id: 1, text: "Home", path: "/#home", name: "home" },
   { id: 2, text: "Quem Somos", path: "/#us", name: "us" },
-  { id: 3, text: "Depoimentos", path: "/#testimonials", name: "testimonials" },
+  // { id: 3, text: "Depoimentos", path: "/#testimonials", name: "testimonials" },
   { id: 4, text: "Galeria", path: "/#gallery", name: "gallery" },
   { id: 5, text: "Grupo", path: "/#group", name: "group" },
-  { id: 6, text: "Blog", path: "/#blog", name: "blog" },
+  // { id: 6, text: "Blog", path: "/#blog", name: "blog" },
   { id: 7, text: "Contato", path: "/#contact", name: "contact" },
 ];
 

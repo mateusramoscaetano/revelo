@@ -1,0 +1,30 @@
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  perspective: 1000px; /* Adds 3D perspective */
+  overflow: hidden;
+}
+
+.carousel-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}

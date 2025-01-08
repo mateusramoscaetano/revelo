@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { MainButton } from "../ui/main-button";
 
 export function GroupIntro() {
@@ -17,7 +18,13 @@ export function GroupIntro() {
           Muita festa.
         </div>
 
-        <MainButton label="Conheça" />
+        <Link
+          href={"https://grupoatmosfera.com.br"}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <MainButton label="Conheça" />
+        </Link>
       </div>
     </>
   );

@@ -98,17 +98,17 @@ body {
 
 @layer base {
   @font-face {
-    font-family: 'Neue';
+    font-family: "Neue";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(./fonts/NeueHaasDisplayRoman.ttf) format('truetype');
+    src: url(./fonts/NeueHaasDisplayRoman.ttf) format("truetype");
   }
   @font-face {
-    font-family: 'Neue Bold';
+    font-family: "Neue Bold";
     font-style: normal;
     font-weight: 800;
     font-display: swap;
-    src: url(./fonts/NeueHaasDisplayBold.ttf) format('truetype');
+    src: url(./fonts/NeueHaasDisplayBold.ttf) format("truetype");
   }
 }

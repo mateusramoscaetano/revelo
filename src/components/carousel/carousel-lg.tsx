@@ -1,37 +1,45 @@
 "use client";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
-import "./style-mobile.css";
+import "./style.css";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination } from "swiper/modules";
+import { EffectCoverflow, Pagination, Navigation, A11y } from "swiper/modules";
 
 import { mediaItems } from "@/utils/media-items";
+import { SwiperNavButtons } from "./swiper-nav-button";
+import type { Swiper as ST } from "swiper/types";
+import { useState } from "react";
 
-export function CarouselMobile() {
+export function CarouselLg() {
   const shuffledItems = mediaItems;
+  const [swiper, setSwiper] = useState<ST>();
 
   return (
     <>
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
+        draggable={true}
         centeredSlides={true}
-        slidesPerView={2}
+        slidesPerView={8}
+        initialSlide={0}
+        loop
+        onSwiper={setSwiper}
         coverflowEffect={{
-          rotate: 20,
+          rotate: 50,
           stretch: 0,
           depth: 100,
           modifier: 1,
+          slideShadows: true,
         }}
-        loop
-        spaceBetween={0}
         pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper overflow-hidden object-cover relative "
+        modules={[EffectCoverflow, Pagination, Navigation, A11y]}
+        className="mySwiper overflow-hidden object-cover relative select-none"
       >
         {shuffledItems.map((item, index) => (
           <SwiperSlide key={index}>
@@ -41,9 +49,11 @@ export function CarouselMobile() {
               height={300}
               alt={`media-${index}`}
               className="overflow-hidden"
+              fetchPriority="high"
             />
           </SwiperSlide>
         ))}
+        <SwiperNavButtons />
       </Swiper>
     </>
   );

@@ -32,7 +32,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/components/carousel/carousel-test.tsx",
+    "src/components/carousel/carousel-lg.tsx",
     "src/components/image-switcher.jsx",
     "src/components/image-switcher.jsx"
   ],
