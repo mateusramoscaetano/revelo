@@ -1,16 +1,12 @@
 import Image from "next/image";
+import { SectionTitle } from "../ui/section-title";
 
-interface IContactIntroProps {}
-
-export function ContactIntro({}: IContactIntroProps) {
+export function ContactIntro() {
   return (
     <>
       <div className="w-full mb-[60px]">
-        <div className="pb-2  flex flex-col items-start  justify-start mb-[30px]">
-          <div className=" text-xl font-semibold flex items-center">
-            Fale com a gente
-            <div className="ml-2 h-[1px] w-[62px] bg-red-500"></div>
-          </div>
+        <div className="pb-2  flex flex-col items-start  justify-start">
+          <SectionTitle title="Fale com a gente" />
         </div>
 
         <div className="text-2xl tracking-[2.4px] max-w-[452px]">

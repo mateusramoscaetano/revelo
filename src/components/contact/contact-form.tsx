@@ -1,10 +1,14 @@
 "use client";
-import { useState, type ReactNode } from "react";
-import { useForm } from "react-hook-form";
+
 import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { Input } from "../ui/input";
 import { Spinner } from "../ui/spinner";
+import { useForm } from "react-hook-form";
+import { Textarea } from "../ui/textarea";
+import { MainButton } from "../ui/main-button";
+import { useState, type ReactNode } from "react";
 import { formatPhone } from "@/utils/formatPhone";
+import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
   FormControl,
@@ -12,11 +16,6 @@ import {
   FormItem,
   FormMessage,
 } from "../ui/form";
-import { Input } from "../ui/input";
-import { Textarea } from "../ui/textarea";
-import { MainButton } from "../ui/main-button";
-
-interface IContactFormProps {}
 
 export interface ContactSchema {
   name: string;
@@ -32,7 +31,7 @@ const createContact = z.object({
   message: z.string({ required_error: "Campo obrigatório" }),
 });
 
-export function ContactForm({}: IContactFormProps) {
+export function ContactForm() {
   const [buttonLabel, setButtonLabel] = useState<ReactNode>("Enviar");
 
   const form = useForm<z.infer<typeof createContact>>({
@@ -49,7 +48,7 @@ export function ContactForm({}: IContactFormProps) {
     try {
       setButtonLabel(<Spinner />);
 
-      const response = await fetch("/api/email", {
+      await fetch("/api/email", {
         method: "POST",
         body: JSON.stringify({
           email: values.email,

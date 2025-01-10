@@ -1,5 +1,5 @@
-import { ContactIntro } from "./contact-intro";
 import { ContactForm } from "./contact-form";
+import { ContactIntro } from "./contact-intro";
 
 export function ContactContainer() {
   return (
