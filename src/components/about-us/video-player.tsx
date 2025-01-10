@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 import { X } from "../icons/x";
 
 export const VideoPlayer = ({ className }: { className?: string }) => {
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, _] = useState(true);
   const [isMuted, setIsMuted] = useState(true);
 
   const [isOverlayActive, setIsOverlayActive] = useState(false);
