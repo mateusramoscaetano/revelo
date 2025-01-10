@@ -1,11 +1,11 @@
 "use client";
-import { useState } from "react";
-import ReactPlayer from "react-player";
 import Image from "next/image";
-import { Play } from "lucide-react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Play } from "lucide-react";
+import ReactPlayer from "react-player";
 
-export const VideoPlayer2 = ({ className }: { className?: string }) => {
+export const VideoPlayerMobile = ({ className }: { className?: string }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
 
