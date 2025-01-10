@@ -1,9 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Separator } from "../ui/separator";
 import { HowWeDoCard } from "./how-we-do-card";
-import { VideoPlayer } from "./video-player";
-import { VideoPlayer2 } from "./video-player-mobile";
+import { VideoPlayerMobile } from "./video-player-mobile";
 
 export function HowWeDoMobile() {
   const [isClient, setIsClient] = useState(false);
@@ -62,7 +60,7 @@ export function HowWeDoMobile() {
         />
         <div className="w-[70px] text-white bg-white h-0.5  rotate-90 mx-auto "></div>
 
-        <VideoPlayer2 className="-mt-24" />
+        <VideoPlayerMobile className="-mt-24" />
 
         <HowWeDoCard
           left={true}
