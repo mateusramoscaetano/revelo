@@ -51,8 +51,8 @@ export function Grid2Xl() {
         img={
           <ImageSwitcher
             image1={"/img-6.png"}
-            image2={"/img-3.png"}
-            className2="scale-[108%] pl-[12px]"
+            image2={"/img-34.jpg"}
+            className2="w-[388px] h-[388px]"
           />
         }
         className="bg-revelo overflow-hidden"
@@ -136,8 +136,8 @@ export function GridXl() {
         img={
           <ImageSwitcher
             image1={"/img-6.png"}
-            image2={"/img-3.png"}
-            className2="scale-[108%] pl-[12px]"
+            image2={"/img-34.jpg"}
+            className2="w-[388px] h-[388px]"
           />
         }
         className="bg-revelo overflow-hidden"
@@ -174,9 +174,9 @@ export function GridMd() {
         name="2"
         img={
           <ImageSwitcher
-            image1={"/img-3.png"}
+            image1={"/img-34.jpg"}
             image2={"/img-20.png"}
-            className="scale-[108%] pl-[12px]"
+            className="w-[388px] h-[388px]"
           />
         }
         className="bg-revelo overflow-hidden"
