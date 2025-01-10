@@ -1,11 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import ReactPlayer from "react-player";
 import { GroupIntro } from "./group-intro";
 
-interface IGroupContainerProps {}
-
-export function GroupContainer({}: IGroupContainerProps) {
+export function GroupContainer() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
