@@ -1,5 +1,5 @@
 import { Home } from "@/components/home/home";
-import { WhereWeAreMap } from "@/components/where-we-are/map";
+import { Location } from "@/components/location/map";
 import { GroupContainer } from "@/components/group/group-container";
 import { ContactContainer } from "@/components/contact/contact-container";
 import { AboutUSContainer } from "@/components/about-us/about-us-container";
@@ -12,7 +12,7 @@ export default function App() {
       <AboutUSContainer />
       <CarouselContainer />
       <GroupContainer />
-      <WhereWeAreMap />
+      <Location />
       <ContactContainer />
     </>
   );

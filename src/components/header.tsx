@@ -81,7 +81,7 @@ export function Header() {
             alt="logo"
           />
         </div>
-
+        {/* Menu Web */}
         <nav className="hidden lg:flex  gap-2 xl:gap-9 items-center justify-center">
           {menuItems.map((item) => (
             <div
@@ -176,7 +176,11 @@ export function Header() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
-                    transition={{ delay: index * 0.1, duration: 0.3 }}
+                    transition={{
+                      delay: index * 0.1,
+                      duration: 0.3,
+                      ease: "easeInOut",
+                    }}
                     className={`cursor-pointer ${
                       highlightedPath === item.path
                         ? "font-bold border border-yellow-200 p-2"
@@ -189,29 +193,42 @@ export function Header() {
               ))}
             </ul>
 
-            <div className="absolute bottom-10 flex w-full items-end justify-center 3sm:gap-[30px] gap-4">
-              <a
-                href="https://www.instagram.com/rvloprod?igsh=OGp3Z3RuZTFqc2h5"
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm flex font-medium whitespace-nowrap"
-              >
-                <Instagram className="mr-2 size-5" />
-              </a>
-              <Phone />
-              <Linkedin />
-              <a
-                href="mailto:contato@grupoatmosfera.com.br"
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm flex font-medium whitespace-nowrap"
-              >
-                <Mail />
-              </a>
-            </div>
+            <MenuFooter />
           </motion.div>
         )}
       </AnimatePresence>
     </>
+  );
+}
+
+function MenuFooter() {
+  return (
+    <div className="absolute bottom-10 flex w-full items-end justify-center 3sm:gap-[30px] gap-4">
+      <a
+        href="https://www.instagram.com/rvloprod?igsh=OGp3Z3RuZTFqc2h5"
+        target="_blank"
+        rel="noreferrer"
+        className="text-sm flex font-medium whitespace-nowrap"
+      >
+        <Instagram className="mr-2 size-5" />
+      </a>
+      <a
+        href="https://wa.me/5541987352716"
+        target="_blank"
+        rel="noreferrer"
+        className="text-sm flex font-medium whitespace-nowrap"
+      >
+        <Phone />
+      </a>
+      <Linkedin />
+      <a
+        href="mailto:contato@grupoatmosfera.com.br"
+        target="_blank"
+        rel="noreferrer"
+        className="text-sm flex font-medium whitespace-nowrap"
+      >
+        <Mail />
+      </a>
+    </div>
   );
 }
