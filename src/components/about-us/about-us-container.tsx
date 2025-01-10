@@ -1,9 +1,9 @@
 "use client";
 
 import { MeetOurTeam } from "./meet-our-team";
-import { HowWeDo } from "./how-we-do";
+import { HowWeDoWeb } from "./how-we-do-web";
 import { HowWeDoMobile } from "./how-we-do-mobile";
-import { HowWeDoTitle } from "./how-we-do-title";
+import { HowWeDoTopSection } from "./how-we-do-top-section";
 import Image from "next/image";
 
 export function AboutUSContainer() {
@@ -14,8 +14,8 @@ export function AboutUSContainer() {
         className="flex flex-col justify-start items-center relative w-full"
       >
         <MeetOurTeam />
-        <HowWeDoTitle />
-        <HowWeDo />
+        <HowWeDoTopSection />
+        <HowWeDoWeb />
         <HowWeDoMobile />
         <Image
           src={"/sonsa.png"}
