@@ -4,7 +4,7 @@ import { HowWeDoCard } from "./how-we-do-card";
 import { VideoPlayer } from "./video-player";
 import { useEffect, useState } from "react";
 
-export function HowWeDo() {
+export function HowWeDoWeb() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
