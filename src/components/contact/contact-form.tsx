@@ -52,9 +52,9 @@ export function ContactForm() {
         method: "POST",
         body: JSON.stringify({
           email: values.email,
-          message: `Email:${values.message}`,
-          Nome: values.name,
-          Telefone: values.phone,
+          message: values.message,
+          name: values.name,
+          phone: values.phone,
         }),
       });
 
