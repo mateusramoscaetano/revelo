@@ -1,11 +1,11 @@
 import Image from "next/image";
 
-import { FollowRevelo } from "./follow-revelo";
+import { SeeVector } from "./see-vector";
 import { GridSquare } from "./square";
-import { Vetor } from "./vetor/vetor";
+import { FollowRevelo } from "./follow-revelo";
 import { ImageSwitcher } from "../image-switcher";
 
-export function Grid() {
+export function Grid2Xl() {
   return (
     <div className="hidden 1730:grid  1730:grid-rows-3 1730:grid-cols-4 w-full relative">
       <FollowRevelo />
@@ -31,15 +31,12 @@ export function Grid() {
           <ImageSwitcher
             image1={"/img-34.jpg"}
             image2={"/img-32.png"}
-            className=""
-            className2=""
             hasLineWeb
             horizontalLineClassName="w-40"
             verticalLineClassName="left-40"
             redLineClassName="left-40"
           />
         }
-        className=""
       />
       <GridSquare
         name="4"
@@ -62,7 +59,7 @@ export function Grid() {
       />
       <GridSquare
         name="7"
-        img={<Vetor />}
+        img={<SeeVector />}
         className="1730:col-span-2 w-full bg-white"
       />
       <GridSquare
@@ -127,14 +124,12 @@ export function GridXl() {
             image1={"/img-34.jpg"}
             image2={"/img-32.png"}
             className="w-[388px] h-[388px]"
-            className2=""
             hasLineWeb
             horizontalLineClassName="w-40"
             verticalLineClassName="left-40"
             redLineClassName="left-40"
           />
         }
-        className=" "
       />
       <GridSquare
         name="4"
@@ -149,22 +144,20 @@ export function GridXl() {
       />
       <GridSquare
         name="5"
-        img={<Vetor />}
+        img={<SeeVector />}
         className="col-span-2 w-full bg-white"
       />
       <GridSquare
-        name="5"
+        name="6"
         img={<ImageSwitcher image1={"/img-5.png"} image2={"/img-5-2.png"} />}
       />
       <GridSquare
         name="7"
         img={<ImageSwitcher image1={"/img-8.png"} image2={"/img-7-2.png"} />}
-        className=""
       />
       <GridSquare
         name="8"
         img={<ImageSwitcher image1={"/img-10.png"} image2={"/img-8-2.png"} />}
-        className=""
       />
     </div>
   );
@@ -210,15 +203,13 @@ export function GridMd() {
           <ImageSwitcher
             image1={"/img-31.png"}
             image2={"/img-6-2.png"}
-            className=""
             hasLineWeb
           />
         }
-        className=""
       />
-      <GridSquare name="3" img={<Vetor />} className="col-span-2 w-full" />
+      <GridSquare name="5" img={<SeeVector />} className="col-span-2 w-full" />
       <GridSquare
-        name="4"
+        name="6"
         img={
           <ImageSwitcher
             image1={"/img-7.png"}
@@ -229,15 +220,15 @@ export function GridMd() {
         className="1730:row-start-3 bg-revelo overflow-hidden"
       />
       <GridSquare
-        name="5"
+        name="7"
         img={<ImageSwitcher image1={"/img-8-2.png"} image2={"/img-4.png"} />}
       />
       <GridSquare
-        name="6"
+        name="8"
         img={<ImageSwitcher image1={"/image-1-1.png"} image2={"/img-10.png"} />}
       />
       <GridSquare
-        name="7"
+        name="9"
         img={<Image src={"/img-5.png"} width={388} height={388} alt="" />}
       />
     </div>
@@ -253,13 +244,7 @@ export function GridSm() {
       />
       <GridSquare
         name="2"
-        img={
-          <ImageSwitcher
-            image1={"/img-34.jpg"}
-            image2={"/img-32.png"}
-            className2=""
-          />
-        }
+        img={<ImageSwitcher image1={"/img-34.jpg"} image2={"/img-32.png"} />}
         className="bg-revelo overflow-hidden w-full h-[200px] "
       />
       <GridSquare
@@ -285,7 +270,7 @@ export function GridSm() {
       />
       <GridSquare
         name="5"
-        img={<Vetor className="scale" />}
+        img={<SeeVector className="scale" />}
         className="col-span-2 w-full max-w-[400px] bg-white h-[200px] relative"
       />
       <GridSquare
