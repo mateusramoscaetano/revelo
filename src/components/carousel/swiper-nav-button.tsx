@@ -1,4 +1,3 @@
-import { SquareChevronLeft, SquareChevronRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { useSwiper } from "swiper/react";
